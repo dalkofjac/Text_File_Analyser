@@ -1,0 +1,10 @@
+C:\Users\Dalibor\Desktop\Semestri\8.semestar\SI\Programi\text_file_analyser\text_file_analyser\bin\Debug\text_file_analyser.exe.config
+C:\Users\Dalibor\Desktop\Semestri\8.semestar\SI\Programi\text_file_analyser\text_file_analyser\bin\Debug\text_file_analyser.exe
+C:\Users\Dalibor\Desktop\Semestri\8.semestar\SI\Programi\text_file_analyser\text_file_analyser\bin\Debug\text_file_analyser.pdb
+C:\Users\Dalibor\Desktop\Semestri\8.semestar\SI\Programi\text_file_analyser\text_file_analyser\obj\Debug\text_file_analyser.csprojResolveAssemblyReference.cache
+C:\Users\Dalibor\Desktop\Semestri\8.semestar\SI\Programi\text_file_analyser\text_file_analyser\obj\Debug\text_file_analyser.Form1.resources
+C:\Users\Dalibor\Desktop\Semestri\8.semestar\SI\Programi\text_file_analyser\text_file_analyser\obj\Debug\text_file_analyser.Properties.Resources.resources
+C:\Users\Dalibor\Desktop\Semestri\8.semestar\SI\Programi\text_file_analyser\text_file_analyser\obj\Debug\text_file_analyser.csproj.GenerateResource.Cache
+C:\Users\Dalibor\Desktop\Semestri\8.semestar\SI\Programi\text_file_analyser\text_file_analyser\obj\Debug\text_file_analyser.exe
+C:\Users\Dalibor\Desktop\Semestri\8.semestar\SI\Programi\text_file_analyser\text_file_analyser\obj\Debug\text_file_analyser.pdb
+C:\Users\Dalibor\Desktop\Semestri\8.semestar\SI\Programi\text_file_analyser\text_file_analyser\bin\Debug\System.Management.Automation.dll
