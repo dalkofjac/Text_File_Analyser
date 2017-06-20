@@ -33,6 +33,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label_description = new System.Windows.Forms.Label();
             this.label_name = new System.Windows.Forms.Label();
+            this.btnAnaliza = new System.Windows.Forms.Button();
             this.button_select_path = new System.Windows.Forms.Button();
             this.textBox_path = new System.Windows.Forms.TextBox();
             this.textBox_split = new System.Windows.Forms.TextBox();
@@ -55,7 +56,8 @@
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Location = new System.Drawing.Point(12, 6);
+            this.splitContainer1.Location = new System.Drawing.Point(9, 5);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -68,6 +70,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.btnAnaliza);
             this.splitContainer1.Panel2.Controls.Add(this.button_select_path);
             this.splitContainer1.Panel2.Controls.Add(this.textBox_path);
             this.splitContainer1.Panel2.Controls.Add(this.textBox_split);
@@ -81,16 +84,18 @@
             this.splitContainer1.Panel2.Controls.Add(this.button_bytestats);
             this.splitContainer1.Panel2.Controls.Add(this.button_rtfdump);
             this.splitContainer1.Panel2.Controls.Add(this.button_base64dump);
-            this.splitContainer1.Size = new System.Drawing.Size(1096, 564);
-            this.splitContainer1.SplitterDistance = 181;
+            this.splitContainer1.Size = new System.Drawing.Size(934, 458);
+            this.splitContainer1.SplitterDistance = 146;
+            this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 12;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(381, 16);
+            this.pictureBox1.Location = new System.Drawing.Point(286, 13);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(164, 146);
+            this.pictureBox1.Size = new System.Drawing.Size(123, 119);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -99,9 +104,10 @@
             // 
             this.label_description.AutoSize = true;
             this.label_description.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_description.Location = new System.Drawing.Point(559, 99);
+            this.label_description.Location = new System.Drawing.Point(419, 80);
+            this.label_description.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_description.Name = "label_description";
-            this.label_description.Size = new System.Drawing.Size(291, 20);
+            this.label_description.Size = new System.Drawing.Size(246, 17);
             this.label_description.TabIndex = 7;
             this.label_description.Text = ".txt, .rtf and .doc(x) files analysing tool";
             // 
@@ -109,18 +115,34 @@
             // 
             this.label_name.AutoSize = true;
             this.label_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_name.Location = new System.Drawing.Point(551, 63);
+            this.label_name.Location = new System.Drawing.Point(413, 51);
+            this.label_name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_name.Name = "label_name";
-            this.label_name.Size = new System.Drawing.Size(253, 36);
+            this.label_name.Size = new System.Drawing.Size(205, 29);
             this.label_name.TabIndex = 8;
             this.label_name.Text = "Text File Analyser";
+            // 
+            // btnAnaliza
+            // 
+            this.btnAnaliza.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnAnaliza.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnaliza.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnAnaliza.ForeColor = System.Drawing.Color.White;
+            this.btnAnaliza.Location = new System.Drawing.Point(789, 87);
+            this.btnAnaliza.Name = "btnAnaliza";
+            this.btnAnaliza.Size = new System.Drawing.Size(116, 83);
+            this.btnAnaliza.TabIndex = 17;
+            this.btnAnaliza.Text = "Analiza datoteke preko Virus Total servisa";
+            this.btnAnaliza.UseVisualStyleBackColor = false;
+            this.btnAnaliza.Click += new System.EventHandler(this.btnAnaliza_Click);
             // 
             // button_select_path
             // 
             this.button_select_path.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_select_path.Location = new System.Drawing.Point(77, 48);
+            this.button_select_path.Location = new System.Drawing.Point(58, 39);
+            this.button_select_path.Margin = new System.Windows.Forms.Padding(2);
             this.button_select_path.Name = "button_select_path";
-            this.button_select_path.Size = new System.Drawing.Size(156, 35);
+            this.button_select_path.Size = new System.Drawing.Size(117, 28);
             this.button_select_path.TabIndex = 16;
             this.button_select_path.Text = "Odabir datoteke";
             this.button_select_path.UseVisualStyleBackColor = true;
@@ -129,46 +151,51 @@
             // textBox_path
             // 
             this.textBox_path.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_path.Location = new System.Drawing.Point(241, 48);
+            this.textBox_path.Location = new System.Drawing.Point(181, 39);
+            this.textBox_path.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_path.Multiline = true;
             this.textBox_path.Name = "textBox_path";
             this.textBox_path.ReadOnly = true;
-            this.textBox_path.Size = new System.Drawing.Size(804, 35);
+            this.textBox_path.Size = new System.Drawing.Size(724, 29);
             this.textBox_path.TabIndex = 15;
             // 
             // textBox_split
             // 
             this.textBox_split.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_split.Location = new System.Drawing.Point(567, 268);
+            this.textBox_split.Location = new System.Drawing.Point(425, 218);
+            this.textBox_split.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_split.Name = "textBox_split";
-            this.textBox_split.Size = new System.Drawing.Size(158, 24);
+            this.textBox_split.Size = new System.Drawing.Size(120, 21);
             this.textBox_split.TabIndex = 14;
             // 
             // label_split
             // 
             this.label_split.AutoSize = true;
             this.label_split.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_split.Location = new System.Drawing.Point(315, 268);
+            this.label_split.Location = new System.Drawing.Point(236, 218);
+            this.label_split.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_split.Name = "label_split";
-            this.label_split.Size = new System.Drawing.Size(230, 18);
+            this.label_split.Size = new System.Drawing.Size(195, 15);
             this.label_split.TabIndex = 13;
             this.label_split.Text = "Broj instanci datoteke (split): ";
             // 
             // textBox_research_word
             // 
             this.textBox_research_word.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_research_word.Location = new System.Drawing.Point(567, 238);
+            this.textBox_research_word.Location = new System.Drawing.Point(425, 193);
+            this.textBox_research_word.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_research_word.Name = "textBox_research_word";
-            this.textBox_research_word.Size = new System.Drawing.Size(158, 24);
+            this.textBox_research_word.Size = new System.Drawing.Size(120, 21);
             this.textBox_research_word.TabIndex = 12;
             // 
             // label_research
             // 
             this.label_research.AutoSize = true;
             this.label_research.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_research.Location = new System.Drawing.Point(340, 241);
+            this.label_research.Location = new System.Drawing.Point(255, 196);
+            this.label_research.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_research.Name = "label_research";
-            this.label_research.Size = new System.Drawing.Size(205, 18);
+            this.label_research.Size = new System.Drawing.Size(173, 15);
             this.label_research.TabIndex = 11;
             this.label_research.Text = "Traženi izraz (re-search): ";
             // 
@@ -178,9 +205,10 @@
             this.button_split.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_split.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_split.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button_split.Location = new System.Drawing.Point(889, 107);
+            this.button_split.Location = new System.Drawing.Point(667, 87);
+            this.button_split.Margin = new System.Windows.Forms.Padding(2);
             this.button_split.Name = "button_split";
-            this.button_split.Size = new System.Drawing.Size(156, 102);
+            this.button_split.Size = new System.Drawing.Size(117, 83);
             this.button_split.TabIndex = 5;
             this.button_split.Text = "Podjela datoteke na više instanci (Split file)";
             this.button_split.UseVisualStyleBackColor = false;
@@ -191,9 +219,10 @@
             this.label_credentials.AutoSize = true;
             this.label_credentials.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_credentials.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label_credentials.Location = new System.Drawing.Point(363, 353);
+            this.label_credentials.Location = new System.Drawing.Point(272, 287);
+            this.label_credentials.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_credentials.Name = "label_credentials";
-            this.label_credentials.Size = new System.Drawing.Size(429, 13);
+            this.label_credentials.Size = new System.Drawing.Size(367, 12);
             this.label_credentials.TabIndex = 9;
             this.label_credentials.Text = "Made by Dalibor Kofjac and Jurica Bunic @ FOI - 2017 | Powered by Didier Stevens " +
     "Apps";
@@ -204,9 +233,10 @@
             this.button_research.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_research.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_research.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button_research.Location = new System.Drawing.Point(727, 107);
+            this.button_research.Location = new System.Drawing.Point(545, 87);
+            this.button_research.Margin = new System.Windows.Forms.Padding(2);
             this.button_research.Name = "button_research";
-            this.button_research.Size = new System.Drawing.Size(156, 102);
+            this.button_research.Size = new System.Drawing.Size(117, 83);
             this.button_research.TabIndex = 4;
             this.button_research.Text = "Pretraga po ključnom izrazu (Re-search)";
             this.button_research.UseVisualStyleBackColor = false;
@@ -218,9 +248,10 @@
             this.button_filescanner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_filescanner.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_filescanner.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button_filescanner.Location = new System.Drawing.Point(77, 107);
+            this.button_filescanner.Location = new System.Drawing.Point(58, 87);
+            this.button_filescanner.Margin = new System.Windows.Forms.Padding(2);
             this.button_filescanner.Name = "button_filescanner";
-            this.button_filescanner.Size = new System.Drawing.Size(156, 102);
+            this.button_filescanner.Size = new System.Drawing.Size(117, 83);
             this.button_filescanner.TabIndex = 0;
             this.button_filescanner.Text = "Ekstrakcija svih meta-podataka (FileScanner)";
             this.button_filescanner.UseVisualStyleBackColor = false;
@@ -232,9 +263,10 @@
             this.button_bytestats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_bytestats.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_bytestats.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button_bytestats.Location = new System.Drawing.Point(241, 107);
+            this.button_bytestats.Location = new System.Drawing.Point(181, 87);
+            this.button_bytestats.Margin = new System.Windows.Forms.Padding(2);
             this.button_bytestats.Name = "button_bytestats";
-            this.button_bytestats.Size = new System.Drawing.Size(156, 102);
+            this.button_bytestats.Size = new System.Drawing.Size(117, 83);
             this.button_bytestats.TabIndex = 1;
             this.button_bytestats.Text = "Izračun statistike bajtova (Byte-stats)";
             this.button_bytestats.UseVisualStyleBackColor = false;
@@ -246,9 +278,10 @@
             this.button_rtfdump.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_rtfdump.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_rtfdump.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button_rtfdump.Location = new System.Drawing.Point(565, 107);
+            this.button_rtfdump.Location = new System.Drawing.Point(424, 87);
+            this.button_rtfdump.Margin = new System.Windows.Forms.Padding(2);
             this.button_rtfdump.Name = "button_rtfdump";
-            this.button_rtfdump.Size = new System.Drawing.Size(156, 102);
+            this.button_rtfdump.Size = new System.Drawing.Size(117, 83);
             this.button_rtfdump.TabIndex = 3;
             this.button_rtfdump.Text = "Ekstrakcija učahurenih stringova (Rtfdump)";
             this.button_rtfdump.UseVisualStyleBackColor = false;
@@ -260,9 +293,10 @@
             this.button_base64dump.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_base64dump.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_base64dump.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button_base64dump.Location = new System.Drawing.Point(403, 107);
+            this.button_base64dump.Location = new System.Drawing.Point(302, 87);
+            this.button_base64dump.Margin = new System.Windows.Forms.Padding(2);
             this.button_base64dump.Name = "button_base64dump";
-            this.button_base64dump.Size = new System.Drawing.Size(156, 102);
+            this.button_base64dump.Size = new System.Drawing.Size(117, 83);
             this.button_base64dump.TabIndex = 2;
             this.button_base64dump.Text = "Ekstrakcija base64 stringova (Base64dump)";
             this.button_base64dump.UseVisualStyleBackColor = false;
@@ -270,11 +304,12 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1120, 577);
+            this.ClientSize = new System.Drawing.Size(954, 469);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -309,6 +344,7 @@
         private System.Windows.Forms.Button button_bytestats;
         private System.Windows.Forms.Button button_rtfdump;
         private System.Windows.Forms.Button button_base64dump;
+        private System.Windows.Forms.Button btnAnaliza;
     }
 }
 

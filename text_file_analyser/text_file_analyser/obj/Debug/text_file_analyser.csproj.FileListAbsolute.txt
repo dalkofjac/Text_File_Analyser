@@ -18,3 +18,15 @@ C:\Users\Dalibor\Documents\GitHub\Text_File_Analyser\text_file_analyser\text_fil
 C:\Users\Dalibor\Documents\GitHub\Text_File_Analyser\text_file_analyser\text_file_analyser\obj\Debug\text_file_analyser.Form1.resources
 C:\Users\Dalibor\Documents\GitHub\Text_File_Analyser\text_file_analyser\text_file_analyser\obj\Debug\text_file_analyser.Properties.Resources.resources
 C:\Users\Dalibor\Documents\GitHub\Text_File_Analyser\text_file_analyser\text_file_analyser\obj\Debug\text_file_analyser.csproj.GenerateResource.Cache
+D:\Development\Desktop\Text_File_Analyser\text_file_analyser\text_file_analyser\bin\Debug\text_file_analyser.exe.config
+D:\Development\Desktop\Text_File_Analyser\text_file_analyser\text_file_analyser\obj\Debug\text_file_analyser.exe
+D:\Development\Desktop\Text_File_Analyser\text_file_analyser\text_file_analyser\obj\Debug\text_file_analyser.pdb
+D:\Development\Desktop\Text_File_Analyser\text_file_analyser\text_file_analyser\bin\Debug\text_file_analyser.exe
+D:\Development\Desktop\Text_File_Analyser\text_file_analyser\text_file_analyser\bin\Debug\text_file_analyser.pdb
+D:\Development\Desktop\Text_File_Analyser\text_file_analyser\text_file_analyser\bin\Debug\System.Management.Automation.dll
+D:\Development\Desktop\Text_File_Analyser\text_file_analyser\text_file_analyser\obj\Debug\text_file_analyser.csprojResolveAssemblyReference.cache
+D:\Development\Desktop\Text_File_Analyser\text_file_analyser\text_file_analyser\obj\Debug\text_file_analyser.Form1.resources
+D:\Development\Desktop\Text_File_Analyser\text_file_analyser\text_file_analyser\obj\Debug\text_file_analyser.Properties.Resources.resources
+D:\Development\Desktop\Text_File_Analyser\text_file_analyser\text_file_analyser\obj\Debug\text_file_analyser.csproj.GenerateResource.Cache
+D:\Development\Desktop\Text_File_Analyser\text_file_analyser\text_file_analyser\bin\Debug\Newtonsoft.Json.dll
+D:\Development\Desktop\Text_File_Analyser\text_file_analyser\text_file_analyser\bin\Debug\Newtonsoft.Json.xml

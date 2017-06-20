@@ -1,0 +1,2 @@
+Testirano na 24 antivirusnih programa
+Virusa pronadeno: 0

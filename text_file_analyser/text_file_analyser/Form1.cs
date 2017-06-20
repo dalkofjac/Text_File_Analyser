@@ -149,5 +149,12 @@ namespace text_file_analyser
             }
             return false;
         }
+
+        private void btnAnaliza_Click(object sender, EventArgs e)
+        {
+            VirusTotalScan ca = new VirusTotalScan();
+            String id = ca.Scan(selectedPath);
+            String rezultat = ca.GetResults(id);
+        }
     }
 }
