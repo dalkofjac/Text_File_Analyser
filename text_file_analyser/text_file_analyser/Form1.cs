@@ -16,6 +16,8 @@ namespace text_file_analyser
         OpenFileDialog ofd;
         String psScriptPath = @"..\..\..\text_file_analysis_logic\text_file_analysis_script.ps1";
         String selectedPath = "";
+        string rezultatVirusTotal = "";
+        String id = "";
 
         public Form1()
         {
@@ -123,7 +125,7 @@ namespace text_file_analyser
                 selectedPath = ofd.InitialDirectory + ofd.FileName;
             }
             textBox_path.Text = selectedPath;
-
+            rezultatVirusTotal = "";
         }
         
         private bool fileTypeCheck() {
@@ -152,9 +154,25 @@ namespace text_file_analyser
 
         private void btnAnaliza_Click(object sender, EventArgs e)
         {
+            if (fileTypeCheck() == false)
+            {
+                MessageBox.Show("Nije odabrana datoteka ili je pogrešan tip!", "Upozorenje");
+                return;
+            }
             VirusTotalScan ca = new VirusTotalScan();
-            String id = ca.Scan(selectedPath);
-            String rezultat = ca.GetResults(id);
+
+            if (rezultatVirusTotal == "0" || rezultatVirusTotal == "")
+            {
+                id = ca.Scan(selectedPath);
+                rezultatVirusTotal = ca.GetResults(id);
+            }
+            else if(rezultatVirusTotal == "-2")
+            {
+                rezultatVirusTotal = ca.GetResults(id);
+            }else if(rezultatVirusTotal == "1")
+            {
+                rezultatVirusTotal = ca.GetResults(id);
+            }          
         }
     }
 }

@@ -17,6 +17,7 @@ namespace text_file_analyser
         public string APIKey = "82905b25d686e377fdce2c56e462c2c93224e5ff411493ae3efa65913a3d4bf6";
         string scan = "https://www.virustotal.com/vtapi/v2/file/scan";
         string report = "https://www.virustotal.com/vtapi/v2/file/report";
+        string putanja = @"../../../text_file_analysis_logic/results/VirusScanResults.txt";
 
         public VirusTotalScan()
         {
@@ -61,18 +62,23 @@ namespace text_file_analyser
             {
                 System.Threading.Thread.Sleep(2000);
                 MessageBox.Show("Pogreška kod dohvaćanja rezultata! Rezultati možda još nisu spremni. Pokušajte ponovno za minutu!");
-                return "-2";
+                return response.ToString();
             }
             int total = rezultat.total;
             string positives = rezultat.positives;
             string poruka = rezultat.verbose_msg;
-            using (StreamWriter sw = File.CreateText(@"../../../text.txt"))
+            using (StreamWriter sw = File.CreateText(putanja))
             {
                 sw.WriteLine("Testirano na "+total+" antivirusnih programa");
                 sw.WriteLine("Virusa pronadeno: "+positives);
+                sw.WriteLine("\n\n\n");
+                sw.WriteLine("------------------------------");
+                sw.WriteLine("      Detaljni pregled        ");
+                sw.WriteLine("------------------------------");
+                sw.WriteLine(rezultat);
             }
-            Process.Start("notepad.exe", @"../../../text.txt");
-            return poruka;
+            Process.Start("notepad.exe", putanja);
+            return response.ToString();
         }
     }
 }

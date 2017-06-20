@@ -1,5 +1,12 @@
 Testirano na 55 antivirusnih programa
 Virusa pronadeno: 0
+
+
+
+
+------------------------------
+      Detaljni pregled        
+------------------------------
 {
   "scans": {
     "Bkav": {
