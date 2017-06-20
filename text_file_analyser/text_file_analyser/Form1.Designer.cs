@@ -101,9 +101,9 @@
             this.label_description.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_description.Location = new System.Drawing.Point(559, 99);
             this.label_description.Name = "label_description";
-            this.label_description.Size = new System.Drawing.Size(179, 20);
+            this.label_description.Size = new System.Drawing.Size(291, 20);
             this.label_description.TabIndex = 7;
-            this.label_description.Text = "text files analysing tool";
+            this.label_description.Text = ".txt, .rtf and .doc(x) files analysing tool";
             // 
             // label_name
             // 

@@ -132,10 +132,19 @@ namespace text_file_analyser
             }
             string selectedFileName = ofd.FileName;
             int sfLengh = selectedFileName.Length;
-            string sfType = "";
-            string sfTypeRight = ".rtf";
-            sfType = selectedFileName.Substring(selectedFileName.Length - 4);
-            if (sfType.Equals(sfTypeRight) == true) {
+            string sfType1 = "";
+            string sfType2 = "";
+            string sfTypeRtf = ".rtf";
+            string sfTypeTxt = ".txt";
+            string sfTypeDoc = ".doc";
+            string sfTypeDocx = ".docx";
+            sfType1 = selectedFileName.Substring(selectedFileName.Length - 4);
+            sfType2 = selectedFileName.Substring(selectedFileName.Length - 5);
+            if (sfType1.Equals(sfTypeRtf) == true || sfType1.Equals(sfTypeTxt) == true || sfType1.Equals(sfTypeDoc) == true)
+            {
+                return true;
+            }
+            else if(sfType2.Equals(sfTypeDocx) == true){
                 return true;
             }
             return false;
