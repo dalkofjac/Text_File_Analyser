@@ -62,11 +62,12 @@ namespace text_file_analyser
 
         private void button_rtfdump_Click(object sender, EventArgs e)
         {
-            if (fileTypeCheck() == false)
+            if (fileTypeCheck(1) == false)
             {
-                MessageBox.Show("Nije odabrana datoteka ili je pogrešan tip!", "Upozorenje");
+                MessageBox.Show("Nije odabrana datoteka ili je pogrešan tip (mora biti .rtf za ovu analizu)!", "Upozorenje");
             }
-            else {
+            else
+            {
                 rps.RunScript(psScriptPath, "1", "0", selectedPath);
             }
         }
@@ -128,7 +129,7 @@ namespace text_file_analyser
             rezultatVirusTotal = "";
         }
         
-        private bool fileTypeCheck() {
+        private bool fileTypeCheck(int rtfCheck = 0) {
             if (selectedPath.Length == 0) {
                 return false;
             }
@@ -142,14 +143,30 @@ namespace text_file_analyser
             string sfTypeDocx = ".docx";
             sfType1 = selectedFileName.Substring(selectedFileName.Length - 4);
             sfType2 = selectedFileName.Substring(selectedFileName.Length - 5);
-            if (sfType1.Equals(sfTypeRtf) == true || sfType1.Equals(sfTypeTxt) == true || sfType1.Equals(sfTypeDoc) == true)
+            if (rtfCheck == 0)
             {
-                return true;
+                if (sfType1.Equals(sfTypeRtf) == true || sfType1.Equals(sfTypeTxt) == true || sfType1.Equals(sfTypeDoc) == true)
+                {
+                    return true;
+                }
+                else if (sfType2.Equals(sfTypeDocx) == true)
+                {
+                    return true;
+                }
+                return false;
             }
-            else if(sfType2.Equals(sfTypeDocx) == true){
-                return true;
+            else if (rtfCheck == 1)
+            {
+                if (sfType1.Equals(sfTypeRtf) == true)
+                {
+                    return true;
+                }
+                return false;
             }
-            return false;
+            else
+            {
+                return false;
+            }
         }
 
         private void btnAnaliza_Click(object sender, EventArgs e)

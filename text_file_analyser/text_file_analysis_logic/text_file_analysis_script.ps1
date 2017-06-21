@@ -39,7 +39,7 @@ function Print-Info
     2 {
         Print-Info -Name "split - rezultati" |  Out-File -filepath $splitOutputPath
 
-        Write-Output "Datoteka uspjesno podijeljena na $arg2 dijelova" | Out-File -filepath $splitOutputPath -Append
+        Write-Output "Datoteka uspjesno podijeljena na $arg2 instance/i" | Out-File -filepath $splitOutputPath -Append
 
         python .\programs\split\split.py -p $arg2 $textFilePath |  Out-File -filepath $splitOutputPath -Append
 

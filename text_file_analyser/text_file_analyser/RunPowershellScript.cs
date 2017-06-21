@@ -7,6 +7,7 @@ using System.Management.Automation;
 using System.Management.Automation.Runspaces;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Windows.Forms;
 
 namespace text_file_analyser
 {
@@ -38,7 +39,14 @@ namespace text_file_analyser
 
             pipeline.Commands.Add(scriptCommand);
             Collection<PSObject> psObjects;
-            psObjects = pipeline.Invoke();
+            try
+            {
+                psObjects = pipeline.Invoke();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Došlo je do greške pilikom pokretanja Powershell-a. Provjerite ako nemate uključenu zabranu pokretanja Powershell skripti!", "Upozorenje");
+            }
 
             // Same thing different approach //
 
