@@ -33,32 +33,32 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label_description = new System.Windows.Forms.Label();
             this.label_name = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox_format = new System.Windows.Forms.GroupBox();
             this.button_pdf = new System.Windows.Forms.Button();
+            this.button_split = new System.Windows.Forms.Button();
+            this.label_split = new System.Windows.Forms.Label();
+            this.textBox_split = new System.Windows.Forms.TextBox();
+            this.groupBox_analyse = new System.Windows.Forms.GroupBox();
+            this.button_filescanner = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnAnaliza = new System.Windows.Forms.Button();
+            this.button_bytestats = new System.Windows.Forms.Button();
+            this.button_base64dump = new System.Windows.Forms.Button();
+            this.button_rtfdump = new System.Windows.Forms.Button();
+            this.textBox_research_word = new System.Windows.Forms.TextBox();
+            this.button_research = new System.Windows.Forms.Button();
+            this.label_research = new System.Windows.Forms.Label();
             this.button_select_path = new System.Windows.Forms.Button();
             this.textBox_path = new System.Windows.Forms.TextBox();
-            this.textBox_split = new System.Windows.Forms.TextBox();
-            this.label_split = new System.Windows.Forms.Label();
-            this.textBox_research_word = new System.Windows.Forms.TextBox();
-            this.label_research = new System.Windows.Forms.Label();
-            this.button_split = new System.Windows.Forms.Button();
             this.label_credentials = new System.Windows.Forms.Label();
-            this.button_research = new System.Windows.Forms.Button();
-            this.button_filescanner = new System.Windows.Forms.Button();
-            this.button_bytestats = new System.Windows.Forms.Button();
-            this.button_rtfdump = new System.Windows.Forms.Button();
-            this.button_base64dump = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.groupBox_analyse = new System.Windows.Forms.GroupBox();
-            this.groupBox_format = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox_analyse.SuspendLayout();
             this.groupBox_format.SuspendLayout();
+            this.groupBox_analyse.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -117,20 +117,18 @@
             this.label_name.TabIndex = 8;
             this.label_name.Text = "Text File Analyser";
             // 
-            // button1
+            // groupBox_format
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(213, 124);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 89);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Analiza teksta u datoteci";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.analizaRijeci);
+            this.groupBox_format.Controls.Add(this.button_pdf);
+            this.groupBox_format.Controls.Add(this.button_split);
+            this.groupBox_format.Controls.Add(this.label_split);
+            this.groupBox_format.Controls.Add(this.textBox_split);
+            this.groupBox_format.Location = new System.Drawing.Point(838, 88);
+            this.groupBox_format.Name = "groupBox_format";
+            this.groupBox_format.Size = new System.Drawing.Size(296, 283);
+            this.groupBox_format.TabIndex = 21;
+            this.groupBox_format.TabStop = false;
+            this.groupBox_format.Text = "Formatiranje datoteke";
             // 
             // button_pdf
             // 
@@ -147,6 +145,89 @@
             this.button_pdf.UseVisualStyleBackColor = false;
             this.button_pdf.Click += new System.EventHandler(this.button_pdf_Click);
             // 
+            // button_split
+            // 
+            this.button_split.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.button_split.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_split.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_split.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button_split.Location = new System.Drawing.Point(17, 124);
+            this.button_split.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_split.Name = "button_split";
+            this.button_split.Size = new System.Drawing.Size(237, 89);
+            this.button_split.TabIndex = 5;
+            this.button_split.Text = "Podjela datoteke na više instanci (Split file)";
+            this.button_split.UseVisualStyleBackColor = false;
+            this.button_split.Click += new System.EventHandler(this.button_split_Click);
+            // 
+            // label_split
+            // 
+            this.label_split.AutoSize = true;
+            this.label_split.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_split.Location = new System.Drawing.Point(14, 228);
+            this.label_split.Name = "label_split";
+            this.label_split.Size = new System.Drawing.Size(160, 18);
+            this.label_split.TabIndex = 13;
+            this.label_split.Text = "Broj instanci (split): ";
+            // 
+            // textBox_split
+            // 
+            this.textBox_split.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_split.Location = new System.Drawing.Point(200, 225);
+            this.textBox_split.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_split.Name = "textBox_split";
+            this.textBox_split.Size = new System.Drawing.Size(54, 24);
+            this.textBox_split.TabIndex = 14;
+            // 
+            // groupBox_analyse
+            // 
+            this.groupBox_analyse.Controls.Add(this.button_filescanner);
+            this.groupBox_analyse.Controls.Add(this.button1);
+            this.groupBox_analyse.Controls.Add(this.btnAnaliza);
+            this.groupBox_analyse.Controls.Add(this.button_bytestats);
+            this.groupBox_analyse.Controls.Add(this.button_base64dump);
+            this.groupBox_analyse.Controls.Add(this.button_rtfdump);
+            this.groupBox_analyse.Controls.Add(this.textBox_research_word);
+            this.groupBox_analyse.Controls.Add(this.button_research);
+            this.groupBox_analyse.Controls.Add(this.label_research);
+            this.groupBox_analyse.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox_analyse.Location = new System.Drawing.Point(77, 88);
+            this.groupBox_analyse.Name = "groupBox_analyse";
+            this.groupBox_analyse.Size = new System.Drawing.Size(755, 283);
+            this.groupBox_analyse.TabIndex = 20;
+            this.groupBox_analyse.TabStop = false;
+            this.groupBox_analyse.Text = "Analiza datoteke";
+            // 
+            // button_filescanner
+            // 
+            this.button_filescanner.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.button_filescanner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_filescanner.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_filescanner.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button_filescanner.Location = new System.Drawing.Point(18, 31);
+            this.button_filescanner.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_filescanner.Name = "button_filescanner";
+            this.button_filescanner.Size = new System.Drawing.Size(180, 89);
+            this.button_filescanner.TabIndex = 0;
+            this.button_filescanner.Text = "Ekstrakcija svih meta-podataka (FileScanner)";
+            this.button_filescanner.UseVisualStyleBackColor = false;
+            this.button_filescanner.Click += new System.EventHandler(this.button_filescanner_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(213, 124);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(180, 89);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Analiza teksta u datoteci";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.analizaRijeci);
+            // 
             // btnAnaliza
             // 
             this.btnAnaliza.BackColor = System.Drawing.Color.DarkSlateBlue;
@@ -158,9 +239,88 @@
             this.btnAnaliza.Name = "btnAnaliza";
             this.btnAnaliza.Size = new System.Drawing.Size(128, 182);
             this.btnAnaliza.TabIndex = 17;
-            this.btnAnaliza.Text = "Analiza virusa u datoteci (Virus Total servis)";
+            this.btnAnaliza.Text = "Analiza virusa u datoteci (VirusTotal servis)";
             this.btnAnaliza.UseVisualStyleBackColor = false;
             this.btnAnaliza.Click += new System.EventHandler(this.btnAnaliza_Click);
+            // 
+            // button_bytestats
+            // 
+            this.button_bytestats.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.button_bytestats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_bytestats.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_bytestats.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button_bytestats.Location = new System.Drawing.Point(18, 124);
+            this.button_bytestats.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_bytestats.Name = "button_bytestats";
+            this.button_bytestats.Size = new System.Drawing.Size(180, 89);
+            this.button_bytestats.TabIndex = 1;
+            this.button_bytestats.Text = "Izračun statistike bajtova (Byte-stats)";
+            this.button_bytestats.UseVisualStyleBackColor = false;
+            this.button_bytestats.Click += new System.EventHandler(this.button_bytestats_Click);
+            // 
+            // button_base64dump
+            // 
+            this.button_base64dump.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.button_base64dump.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_base64dump.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_base64dump.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button_base64dump.Location = new System.Drawing.Point(213, 31);
+            this.button_base64dump.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_base64dump.Name = "button_base64dump";
+            this.button_base64dump.Size = new System.Drawing.Size(180, 89);
+            this.button_base64dump.TabIndex = 2;
+            this.button_base64dump.Text = "Ekstrakcija base64 stringova (Base64dump)";
+            this.button_base64dump.UseVisualStyleBackColor = false;
+            this.button_base64dump.Click += new System.EventHandler(this.button_base64dump_Click);
+            // 
+            // button_rtfdump
+            // 
+            this.button_rtfdump.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.button_rtfdump.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_rtfdump.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_rtfdump.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button_rtfdump.Location = new System.Drawing.Point(408, 31);
+            this.button_rtfdump.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_rtfdump.Name = "button_rtfdump";
+            this.button_rtfdump.Size = new System.Drawing.Size(180, 89);
+            this.button_rtfdump.TabIndex = 3;
+            this.button_rtfdump.Text = "Ekstrakcija učahurenih stringova (Rtfdump)";
+            this.button_rtfdump.UseVisualStyleBackColor = false;
+            this.button_rtfdump.Click += new System.EventHandler(this.button_rtfdump_Click);
+            // 
+            // textBox_research_word
+            // 
+            this.textBox_research_word.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_research_word.Location = new System.Drawing.Point(383, 228);
+            this.textBox_research_word.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_research_word.Name = "textBox_research_word";
+            this.textBox_research_word.Size = new System.Drawing.Size(204, 24);
+            this.textBox_research_word.TabIndex = 12;
+            // 
+            // button_research
+            // 
+            this.button_research.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.button_research.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_research.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_research.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button_research.Location = new System.Drawing.Point(408, 124);
+            this.button_research.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_research.Name = "button_research";
+            this.button_research.Size = new System.Drawing.Size(180, 89);
+            this.button_research.TabIndex = 4;
+            this.button_research.Text = "Pretraga po ključnom izrazu (Re-search)";
+            this.button_research.UseVisualStyleBackColor = false;
+            this.button_research.Click += new System.EventHandler(this.button_research_Click);
+            // 
+            // label_research
+            // 
+            this.label_research.AutoSize = true;
+            this.label_research.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_research.Location = new System.Drawing.Point(155, 232);
+            this.label_research.Name = "label_research";
+            this.label_research.Size = new System.Drawing.Size(205, 18);
+            this.label_research.TabIndex = 11;
+            this.label_research.Text = "Traženi izraz (re-search): ";
             // 
             // button_select_path
             // 
@@ -185,59 +345,6 @@
             this.textBox_path.Size = new System.Drawing.Size(893, 35);
             this.textBox_path.TabIndex = 15;
             // 
-            // textBox_split
-            // 
-            this.textBox_split.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_split.Location = new System.Drawing.Point(200, 225);
-            this.textBox_split.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox_split.Name = "textBox_split";
-            this.textBox_split.Size = new System.Drawing.Size(54, 24);
-            this.textBox_split.TabIndex = 14;
-            // 
-            // label_split
-            // 
-            this.label_split.AutoSize = true;
-            this.label_split.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_split.Location = new System.Drawing.Point(14, 228);
-            this.label_split.Name = "label_split";
-            this.label_split.Size = new System.Drawing.Size(160, 18);
-            this.label_split.TabIndex = 13;
-            this.label_split.Text = "Broj instanci (split): ";
-            // 
-            // textBox_research_word
-            // 
-            this.textBox_research_word.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_research_word.Location = new System.Drawing.Point(383, 228);
-            this.textBox_research_word.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox_research_word.Name = "textBox_research_word";
-            this.textBox_research_word.Size = new System.Drawing.Size(204, 24);
-            this.textBox_research_word.TabIndex = 12;
-            // 
-            // label_research
-            // 
-            this.label_research.AutoSize = true;
-            this.label_research.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_research.Location = new System.Drawing.Point(155, 232);
-            this.label_research.Name = "label_research";
-            this.label_research.Size = new System.Drawing.Size(205, 18);
-            this.label_research.TabIndex = 11;
-            this.label_research.Text = "Traženi izraz (re-search): ";
-            // 
-            // button_split
-            // 
-            this.button_split.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.button_split.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_split.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_split.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button_split.Location = new System.Drawing.Point(17, 124);
-            this.button_split.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_split.Name = "button_split";
-            this.button_split.Size = new System.Drawing.Size(237, 89);
-            this.button_split.TabIndex = 5;
-            this.button_split.Text = "Podjela datoteke na više instanci (Split file)";
-            this.button_split.UseVisualStyleBackColor = false;
-            this.button_split.Click += new System.EventHandler(this.button_split_Click);
-            // 
             // label_credentials
             // 
             this.label_credentials.AutoSize = true;
@@ -249,113 +356,6 @@
             this.label_credentials.TabIndex = 9;
             this.label_credentials.Text = "Made by Dalibor Kofjac and Jurica Bunic @ FOI - 2017 | Powered by Didier Stevens " +
     "Apps";
-            // 
-            // button_research
-            // 
-            this.button_research.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.button_research.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_research.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_research.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button_research.Location = new System.Drawing.Point(408, 124);
-            this.button_research.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_research.Name = "button_research";
-            this.button_research.Size = new System.Drawing.Size(180, 89);
-            this.button_research.TabIndex = 4;
-            this.button_research.Text = "Pretraga po ključnom izrazu (Re-search)";
-            this.button_research.UseVisualStyleBackColor = false;
-            this.button_research.Click += new System.EventHandler(this.button_research_Click);
-            // 
-            // button_filescanner
-            // 
-            this.button_filescanner.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.button_filescanner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_filescanner.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_filescanner.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button_filescanner.Location = new System.Drawing.Point(18, 31);
-            this.button_filescanner.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_filescanner.Name = "button_filescanner";
-            this.button_filescanner.Size = new System.Drawing.Size(180, 89);
-            this.button_filescanner.TabIndex = 0;
-            this.button_filescanner.Text = "Ekstrakcija svih meta-podataka (FileScanner)";
-            this.button_filescanner.UseVisualStyleBackColor = false;
-            this.button_filescanner.Click += new System.EventHandler(this.button_filescanner_Click);
-            // 
-            // button_bytestats
-            // 
-            this.button_bytestats.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.button_bytestats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_bytestats.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_bytestats.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button_bytestats.Location = new System.Drawing.Point(18, 124);
-            this.button_bytestats.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_bytestats.Name = "button_bytestats";
-            this.button_bytestats.Size = new System.Drawing.Size(180, 89);
-            this.button_bytestats.TabIndex = 1;
-            this.button_bytestats.Text = "Izračun statistike bajtova (Byte-stats)";
-            this.button_bytestats.UseVisualStyleBackColor = false;
-            this.button_bytestats.Click += new System.EventHandler(this.button_bytestats_Click);
-            // 
-            // button_rtfdump
-            // 
-            this.button_rtfdump.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.button_rtfdump.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_rtfdump.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_rtfdump.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button_rtfdump.Location = new System.Drawing.Point(408, 31);
-            this.button_rtfdump.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_rtfdump.Name = "button_rtfdump";
-            this.button_rtfdump.Size = new System.Drawing.Size(180, 89);
-            this.button_rtfdump.TabIndex = 3;
-            this.button_rtfdump.Text = "Ekstrakcija učahurenih stringova (Rtfdump)";
-            this.button_rtfdump.UseVisualStyleBackColor = false;
-            this.button_rtfdump.Click += new System.EventHandler(this.button_rtfdump_Click);
-            // 
-            // button_base64dump
-            // 
-            this.button_base64dump.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.button_base64dump.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_base64dump.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_base64dump.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button_base64dump.Location = new System.Drawing.Point(213, 31);
-            this.button_base64dump.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_base64dump.Name = "button_base64dump";
-            this.button_base64dump.Size = new System.Drawing.Size(180, 89);
-            this.button_base64dump.TabIndex = 2;
-            this.button_base64dump.Text = "Ekstrakcija base64 stringova (Base64dump)";
-            this.button_base64dump.UseVisualStyleBackColor = false;
-            this.button_base64dump.Click += new System.EventHandler(this.button_base64dump_Click);
-            // 
-            // groupBox_analyse
-            // 
-            this.groupBox_analyse.Controls.Add(this.button_filescanner);
-            this.groupBox_analyse.Controls.Add(this.button1);
-            this.groupBox_analyse.Controls.Add(this.btnAnaliza);
-            this.groupBox_analyse.Controls.Add(this.button_bytestats);
-            this.groupBox_analyse.Controls.Add(this.button_base64dump);
-            this.groupBox_analyse.Controls.Add(this.button_rtfdump);
-            this.groupBox_analyse.Controls.Add(this.textBox_research_word);
-            this.groupBox_analyse.Controls.Add(this.button_research);
-            this.groupBox_analyse.Controls.Add(this.label_research);
-            this.groupBox_analyse.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox_analyse.Location = new System.Drawing.Point(77, 88);
-            this.groupBox_analyse.Name = "groupBox_analyse";
-            this.groupBox_analyse.Size = new System.Drawing.Size(755, 283);
-            this.groupBox_analyse.TabIndex = 20;
-            this.groupBox_analyse.TabStop = false;
-            this.groupBox_analyse.Text = "Analiza datoteke";
-            // 
-            // groupBox_format
-            // 
-            this.groupBox_format.Controls.Add(this.button_pdf);
-            this.groupBox_format.Controls.Add(this.button_split);
-            this.groupBox_format.Controls.Add(this.label_split);
-            this.groupBox_format.Controls.Add(this.textBox_split);
-            this.groupBox_format.Location = new System.Drawing.Point(838, 88);
-            this.groupBox_format.Name = "groupBox_format";
-            this.groupBox_format.Size = new System.Drawing.Size(296, 283);
-            this.groupBox_format.TabIndex = 21;
-            this.groupBox_format.TabStop = false;
-            this.groupBox_format.Text = "Formatiranje datoteke";
             // 
             // Form1
             // 
@@ -376,10 +376,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox_analyse.ResumeLayout(false);
-            this.groupBox_analyse.PerformLayout();
             this.groupBox_format.ResumeLayout(false);
             this.groupBox_format.PerformLayout();
+            this.groupBox_analyse.ResumeLayout(false);
+            this.groupBox_analyse.PerformLayout();
             this.ResumeLayout(false);
 
         }
