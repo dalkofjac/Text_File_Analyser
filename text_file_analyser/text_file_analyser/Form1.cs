@@ -127,6 +127,7 @@ namespace text_file_analyser
             }
             textBox_path.Text = selectedPath;
             rezultatVirusTotal = "";
+            btnAnaliza.Text = "Analiza virusa u datoteci (Virus Total servis)";
         }
         
         private bool fileTypeCheck(int rtfCheck = 0) {
@@ -182,6 +183,7 @@ namespace text_file_analyser
             {
                 id = ca.Scan(selectedPath);
                 rezultatVirusTotal = ca.GetResults(id);
+                btnAnaliza.Text = "Rezultati analize za datoteku (" + System.IO.Path.GetFileName(selectedPath) + ")";
             }
             else if(rezultatVirusTotal == "-2")
             {
