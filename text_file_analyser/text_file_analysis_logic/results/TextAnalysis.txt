@@ -1,6 +1,6 @@
 Broj različitih riječi: 19952
-Riječ koja se najčešće pojavljuje: [the, 31946]
-Riječ '[the, 31946]' se pojavljuje: 31946
+Riječ koja se najčešće pojavljuje: the
+Riječ 'the' se pojavljuje: 31946
 
 
 

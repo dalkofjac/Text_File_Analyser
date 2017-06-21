@@ -32,3 +32,4 @@ D:\Development\Desktop\Text_File_Analyser\text_file_analyser\text_file_analyser\
 D:\Development\Desktop\Text_File_Analyser\text_file_analyser\text_file_analyser\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Dalibor\Documents\GitHub\Text_File_Analyser\text_file_analyser\text_file_analyser\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Dalibor\Documents\GitHub\Text_File_Analyser\text_file_analyser\text_file_analyser\bin\Debug\Newtonsoft.Json.xml
+D:\Development\Desktop\Text_File_Analyser\text_file_analyser\text_file_analyser\obj\Debug\text_file_analyser.AnalizaRijeciOgranicenje.resources

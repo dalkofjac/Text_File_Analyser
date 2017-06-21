@@ -187,5 +187,21 @@ namespace text_file_analyser
                 rps.RunScript(psScriptPath, "7", "0", selectedPath);
             }
         }
+
+        private void analizaRijeci(object sender, EventArgs e)
+        {
+            if (fileTypeCheck() == false)
+            {
+                MessageBox.Show("Nije odabrana datoteka ili je pogrešan tip!", "Upozorenje");
+                return;
+            }
+            else
+            {
+                AnalizaRijeciOgranicenje aro = new AnalizaRijeciOgranicenje(selectedPath);
+                aro.Show();
+                //AnalizaRijeci ar = new AnalizaRijeci();
+                //ar.pronadiRijeci(selectedPath);
+            }
+        }
     }
 }
