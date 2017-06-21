@@ -10,6 +10,7 @@ $base64dumpOutputPath = ".\results\base64dump_rezultati.txt"
 $bytestatsOutputPath = ".\results\bytestats_rezultati.txt"
 $filescannerOutputPath = ".\results\filescanner_rezultati.txt"
 $researchOutputPath = ".\results\research_rezultati.txt"
+$pdfconverterOutputPath = ".\results\pdfconverter_rezultati.txt"
 
 # Text file path
 $textFilePath = $args[2]
@@ -37,6 +38,8 @@ function Print-Info
     }
     2 {
         Print-Info -Name "split - rezultati" |  Out-File -filepath $splitOutputPath
+
+        Write-Output "Datoteka uspjesno podijeljena na $arg2 dijelova" | Out-File -filepath $splitOutputPath -Append
 
         python .\programs\split\split.py -p $arg2 $textFilePath |  Out-File -filepath $splitOutputPath -Append
 
@@ -79,6 +82,16 @@ function Print-Info
         Start-Sleep -s 2
 
         Invoke-Item $researchOutputPath
+    }7 {
+        Print-Info -Name "pdf-converter - rezultati" |  Out-File -filepath $pdfconverterOutputPath
+
+        Write-Output "Datoteka uspjesno pretvorena u .pdf dokument" | Out-File -filepath $pdfconverterOutputPath -Append
+
+        python .\programs\pdf_converter\pdf_converter.py $textFilePath
+
+        Start-Sleep -s 2
+
+        Invoke-Item $pdfconverterOutputPath
     }
     default { "Krivi unos!" }
 }

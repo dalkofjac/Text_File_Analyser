@@ -172,7 +172,20 @@ namespace text_file_analyser
             }else if(rezultatVirusTotal == "1")
             {
                 rezultatVirusTotal = ca.GetResults(id);
-            }          
+            }
+        }
+
+        private void button_pdf_Click(object sender, EventArgs e)
+        {
+            if (fileTypeCheck() == false)
+            {
+                MessageBox.Show("Nije odabrana datoteka ili je pogrešan tip!", "Upozorenje");
+                return;
+            }
+            else
+            {
+                rps.RunScript(psScriptPath, "7", "0", selectedPath);
+            }
         }
     }
 }
