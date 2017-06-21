@@ -1,4 +1,4 @@
-Testirano na 57 antivirusnih programa
+Testirano na 56 antivirusnih programa
 Virusa pronadeno: 0
 
 
@@ -45,9 +45,9 @@ Virusa pronadeno: 0
       "result": null,
       "update": "20170621"
     },
-    "McAfee": {
+    "ALYac": {
       "detected": false,
-      "version": "6.0.6.653",
+      "version": "1.0.1.9",
       "result": null,
       "update": "20170621"
     },
@@ -57,15 +57,15 @@ Virusa pronadeno: 0
       "result": null,
       "update": "20170621"
     },
-    "Zillya": {
+    "VIPRE": {
       "detected": false,
-      "version": "2.0.0.3318",
+      "version": "58992",
       "result": null,
-      "update": "20170619"
+      "update": "20170621"
     },
-    "AegisLab": {
+    "SUPERAntiSpyware": {
       "detected": false,
-      "version": "4.2",
+      "version": "5.6.0.1032",
       "result": null,
       "update": "20170621"
     },
@@ -99,9 +99,9 @@ Virusa pronadeno: 0
       "result": null,
       "update": "20170621"
     },
-    "Cyren": {
+    "F-Prot": {
       "detected": false,
-      "version": "5.4.30.7",
+      "version": "4.7.1.166",
       "result": null,
       "update": "20170621"
     },
@@ -114,12 +114,6 @@ Virusa pronadeno: 0
     "ESET-NOD32": {
       "detected": false,
       "version": "15621",
-      "result": null,
-      "update": "20170621"
-    },
-    "TrendMicro-HouseCall": {
-      "detected": false,
-      "version": "9.900.0.1004",
       "result": null,
       "update": "20170621"
     },
@@ -153,17 +147,17 @@ Virusa pronadeno: 0
       "result": null,
       "update": "20170621"
     },
-    "SUPERAntiSpyware": {
+    "AegisLab": {
       "detected": false,
-      "version": "5.6.0.1032",
+      "version": "4.2",
       "result": null,
       "update": "20170621"
     },
-    "Rising": {
+    "Tencent": {
       "detected": false,
-      "version": "28.0.0.1",
+      "version": "1.0.0.1",
       "result": null,
-      "update": null
+      "update": "20170621"
     },
     "Ad-Aware": {
       "detected": false,
@@ -195,11 +189,11 @@ Virusa pronadeno: 0
       "result": null,
       "update": "20170621"
     },
-    "VIPRE": {
+    "Zillya": {
       "detected": false,
-      "version": "58992",
+      "version": "2.0.0.3318",
       "result": null,
-      "update": "20170621"
+      "update": "20170619"
     },
     "TrendMicro": {
       "detected": false,
@@ -219,9 +213,9 @@ Virusa pronadeno: 0
       "result": null,
       "update": "20170621"
     },
-    "F-Prot": {
+    "Cyren": {
       "detected": false,
-      "version": "4.7.1.166",
+      "version": "5.4.30.7",
       "result": null,
       "update": "20170621"
     },
@@ -285,9 +279,9 @@ Virusa pronadeno: 0
       "result": null,
       "update": "20170621"
     },
-    "ALYac": {
+    "McAfee": {
       "detected": false,
-      "version": "1.0.1.9",
+      "version": "6.0.6.653",
       "result": null,
       "update": "20170621"
     },
@@ -309,9 +303,9 @@ Virusa pronadeno: 0
       "result": null,
       "update": "20170621"
     },
-    "Tencent": {
+    "Rising": {
       "detected": false,
-      "version": "1.0.0.1",
+      "version": "28.0.0.1",
       "result": null,
       "update": "20170621"
     },
@@ -352,15 +346,15 @@ Virusa pronadeno: 0
       "update": "20170621"
     }
   },
-  "scan_id": "729e371383f67357f9e6951e8745cdf56f6b9de8bd4a9fdce9a9a150bd92abf6-1498068068",
-  "sha1": "217b146730e4c897439b846d9714c2009c6f0cef",
-  "resource": "729e371383f67357f9e6951e8745cdf56f6b9de8bd4a9fdce9a9a150bd92abf6-1498068068",
+  "scan_id": "6ded4f2f463dc952715ad4ab403bdacdd29678ea72a83920f5acdaab55cf3379-1498068133",
+  "sha1": "6c2aba88af5da40c484b4b8fb80e52a3c324f940",
+  "resource": "6ded4f2f463dc952715ad4ab403bdacdd29678ea72a83920f5acdaab55cf3379-1498068133",
   "response_code": 1,
-  "scan_date": "2017-06-21 18:01:08",
-  "permalink": "https://www.virustotal.com/file/729e371383f67357f9e6951e8745cdf56f6b9de8bd4a9fdce9a9a150bd92abf6/analysis/1498068068/",
+  "scan_date": "2017-06-21 18:02:13",
+  "permalink": "https://www.virustotal.com/file/6ded4f2f463dc952715ad4ab403bdacdd29678ea72a83920f5acdaab55cf3379/analysis/1498068133/",
   "verbose_msg": "Scan finished, information embedded",
-  "total": 57,
+  "total": 56,
   "positives": 0,
-  "sha256": "729e371383f67357f9e6951e8745cdf56f6b9de8bd4a9fdce9a9a150bd92abf6",
-  "md5": "595e28aca9666ff6ae833bf4dcd819a4"
+  "sha256": "6ded4f2f463dc952715ad4ab403bdacdd29678ea72a83920f5acdaab55cf3379",
+  "md5": "30c649dc1f91d3a830844116c93fc46a"
 }

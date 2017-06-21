@@ -54,14 +54,14 @@ namespace text_file_analyser
             dynamic rezultat = JsonConvert.DeserializeObject(s);
             if(rezultat==null)
             {
-                MessageBox.Show("Pogreška kod dohvaćanja rezultata! Server nije vratio rezultat!");
+                MessageBox.Show("Pogreška kod dohvaćanja rezultata! Server nije vratio rezultat!", "Upozorenje");
                 return "0";
             }
             int response = rezultat.response_code;
             if(response == -2)
             {
                 System.Threading.Thread.Sleep(2000);
-                MessageBox.Show("Pogreška kod dohvaćanja rezultata! Rezultati možda još nisu spremni. Pokušajte ponovno za minutu!");
+                MessageBox.Show("Pogreška kod dohvaćanja rezultata! Rezultati možda još nisu spremni. Pričekajte rezultate i pokušajte ponovno za minutu!", "Upozorenje");
                 return response.ToString();
             }
             int total = rezultat.total;
