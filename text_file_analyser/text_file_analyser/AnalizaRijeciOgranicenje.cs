@@ -62,13 +62,28 @@ namespace text_file_analyser
         private void btnPokreni_Click(object sender, EventArgs e)
         {
             AnalizaRijeci ar = new AnalizaRijeci();
-            if (!checkBox1.Checked)
+            if (checkBox1.Checked)
             {
-                ar.pronadiRijeci(putanja);
+                if (checkBox2.Checked)
+                {
+                    ar.pronadiRijeciMail(putanja, txtMax.Text, txtMin.Text, true);
+                }
+                else
+                {
+                    ar.pronadiRijeci(putanja, txtMax.Text, txtMin.Text);
+                }
+
             }
             else
             {
-                ar.pronadiRijeci(putanja, txtMax.Text, txtMin.Text);
+                if (checkBox2.Checked)
+                {
+                    ar.pronadiRijeciMail(putanja, txtMax.Text, txtMin.Text, true);
+                }else
+                {
+                    ar.pronadiRijeci(putanja, txtMax.Text, txtMin.Text);
+                }
+                
             }
             
         }

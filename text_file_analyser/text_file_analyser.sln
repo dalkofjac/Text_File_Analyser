@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "text_file_analyser", "text_file_analyser\text_file_analyser.csproj", "{FB823B5F-1903-44DB-9B95-805FFBE3A2BD}"
 EndProject
@@ -15,6 +15,7 @@ Global
 		{FB823B5F-1903-44DB-9B95-805FFBE3A2BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB823B5F-1903-44DB-9B95-805FFBE3A2BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB823B5F-1903-44DB-9B95-805FFBE3A2BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB823B5F-1903-44DB-9B95-805FFBE3A2BD}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
